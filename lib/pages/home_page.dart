@@ -113,11 +113,11 @@ class CatalogItem extends StatelessWidget {
                 "BDT ${catalog.price}".text.bold.xl.make(),
                 ElevatedButton(
                   onPressed: () {},
-                  child: "Buy".text.make(),
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(MyTheme.darkBluishColor),
                       shape: MaterialStateProperty.all(StadiumBorder())),
+                  child: "Buy".text.make(),
                 )
               ],
             ).pOnly(right: 8.0)
