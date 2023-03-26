@@ -2,35 +2,35 @@
     "products": [
       {
         "id": 1,
-        "name": "iPhone 12 Pro aa",
+        "name": "iPhone X",
         "price": 999,
         "description": "Apple iPhone is very good",
         "color": "#33505a",
-        "image": "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+        "image": "https://i0.wp.com/www.mobilebd.co/wp-content/uploads/2021/04/Apple-iPhone-X-Official-image--550x550.jpg"
       },
       {
         "id": 2,
-        "name": "iPhone 12 Pro aa",
+        "name": "Macbook Pro",
         "price": 999,
         "description": "Apple iPhone is very good",
         "color": "#33505a",
-        "image": "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+        "image": "https://www.notebookcheck.net/fileadmin/_processed_/c/3/csm_AKA8518_984be0479c.jpg"
       },
       {
         "id": 3,
-        "name": "iPhone 12 Pro aa",
+        "name": "Asus Zenbook",
         "price": 999,
         "description": "Apple iPhone is very good",
         "color": "#33505a",
-        "image": "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+        "image": "https://m.media-amazon.com/images/I/81e46P26WuS._AC_SL1500_.jpg"
       },
       {
         "id": 4,
-        "name": "iPhone 12 Pro aa",
+        "name": "Mahin for Sale",
         "price": 999,
         "description": "Apple iPhone is very good",
         "color": "#33505a",
-        "image": "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+        "image": "https://samantacomputer.com/wp-content/uploads/2021/12/61E8IwFfGrS._SL1200_.jpg"
       },
       {
         "id": 5,
