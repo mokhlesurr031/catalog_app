@@ -37,15 +37,31 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
         child: Row(
       children: [
-        CatalogImage(image: catalog.image),
+        Hero(
+          tag: Key(catalog.id.toString()),
+          child: CatalogImage(image: catalog.image),
+        ),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-            catalog.description.text.textStyle(context.captionStyle).make(),
-            14.heightBox,
+            catalog.name.text.xl.color(MyTheme.darkBluishColor).bold.make(),
+            12.heightBox,
+            Column(
+              children: const [
+                // catalog.description.text.textStyle(context.captionStyle).make(),
+                Text(
+                  "Click to see description...",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Vx.blue900,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            18.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: EdgeInsets.zero,
