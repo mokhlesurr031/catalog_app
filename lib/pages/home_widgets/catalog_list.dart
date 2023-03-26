@@ -66,14 +66,14 @@ class CatalogItem extends StatelessWidget {
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: EdgeInsets.zero,
               children: [
-                "BDT ${catalog.price}".text.bold.xl.make(),
+                "BDT ${catalog.price}".text.bold.lg.make(),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(MyTheme.darkBluishColor),
                       shape: MaterialStateProperty.all(StadiumBorder())),
-                  child: "Buy".text.make(),
+                  child: "Add to cart".text.make(),
                 )
               ],
             ).pOnly(right: 8.0)
