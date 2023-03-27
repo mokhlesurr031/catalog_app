@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
     // }
 
     final response = await http.get(
-      Uri.parse("http://192.168.0.102:8000/api/v1/product/products/"),
+      Uri.parse("http://3.108.193.142/api/v1/product/products/"),
     );
     final decodedData = jsonDecode(response.body.toString());
 
