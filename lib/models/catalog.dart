@@ -1,15 +1,21 @@
 class CatalogModel {
-  static List<Item> items = [
-    // Item(
-    //   id: 1,
-    //   name: "iPhone 12 Pro aa",
-    //   price: 999,
-    //   description: "Apple iPhone is very good",
-    //   color: "#33505a",
-    //   image:
-    //       "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg",
-    // )
-  ];
+  static List<Item> items = [];
+
+  // Get Item by id
+
+  static Item getById(int id) => items.firstWhere(
+        (element) => element.id == id,
+        orElse: () => Item(
+          id: -1,
+          name: '',
+          description: '',
+          price: 0,
+          color: '',
+          image: '',
+        ),
+      );
+
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

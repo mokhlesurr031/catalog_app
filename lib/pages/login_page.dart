@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: Colors.lightBlue,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -57,7 +57,12 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextFormField(
                         decoration: const InputDecoration(
-                            hintText: "Enter Username", labelText: "Username"),
+                          hintText: "Enter Username",
+                          labelText: "Username",
+                          labelStyle: TextStyle(
+                            color: Color.fromARGB(255, 14, 8, 8),
+                          ),
+                        ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Username cannot be empty";
@@ -72,7 +77,12 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         obscureText: true,
                         decoration: const InputDecoration(
-                            hintText: "Enter Password", labelText: "Password"),
+                          hintText: "Enter Password",
+                          labelText: "Password",
+                          labelStyle: TextStyle(
+                            color: Color.fromARGB(255, 14, 8, 8),
+                          ),
+                        ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Password cannot be empty";

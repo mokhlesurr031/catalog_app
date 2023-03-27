@@ -12,14 +12,13 @@ import "home_widgets/catalog_header.dart";
 import "home_widgets/catalog_list.dart";
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  int days = 25;
-  String name = "Mahin";
-
   @override
   void initState() {
     super.initState();
@@ -41,26 +40,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: MyTheme.creamColor,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          // backgroundColor: MyTheme.darkBluishColor,
-          child: const Icon(CupertinoIcons.cart),
-        ),
-        body: SafeArea(
-          child: Container(
-            padding: Vx.m32,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CatalogHeader(),
-                if (CatalogModel.items.isNotEmpty)
-                  CatalogList().py12().expand()
-                else
-                  const CircularProgressIndicator().centered().expand(),
-              ],
-            ),
+      backgroundColor: MyTheme.creamColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        // backgroundColor: MyTheme.darkBluishColor,
+        child: const Icon(CupertinoIcons.cart),
+      ),
+      body: SafeArea(
+        child: Container(
+          padding: Vx.m32,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CatalogHeader(),
+              if (CatalogModel.items.isNotEmpty)
+                CatalogList().py12().expand()
+              else
+                const CircularProgressIndicator().centered().expand(),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
