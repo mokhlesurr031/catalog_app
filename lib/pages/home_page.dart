@@ -10,6 +10,7 @@ import "package:velocity_x/velocity_x.dart";
 
 import "home_widgets/catalog_header.dart";
 import "home_widgets/catalog_list.dart";
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,15 +27,30 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(const Duration(seconds: 2));
-    final catalogJson =
-        await rootBundle.loadString("assets/files/catalog.json");
-    final decodedData = jsonDecode(catalogJson);
+    // await Future.delayed(const Duration(seconds: 2));
+    // final catalogJson =
+    //     await rootBundle.loadString("assets/files/catalog.json");
+    // final decodedData = jsonDecode(catalogJson);
+    // var productsData = decodedData["products"];
+    // CatalogModel.items = List.from(productsData)
+    //     .map<Item>((item) => Item.fromMap(item))
+    //     .toList();
+    // if (mounted) {
+    //   setState(() {});
+    // }
+
+    final response = await http.get(
+      Uri.parse("http://192.168.0.102:8000/api/v1/product/products/"),
+    );
+    final decodedData = jsonDecode(response.body.toString());
+
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
-    setState(() {});
+    if (mounted) {
+      setState(() {});
+    }
   }
 
   @override

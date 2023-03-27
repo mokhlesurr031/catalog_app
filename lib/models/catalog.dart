@@ -17,7 +17,7 @@ class CatalogModel {
           name: '',
           description: '',
           price: 0,
-          color: '',
+          // color: '',
           image: '',
         ),
       );
@@ -30,7 +30,7 @@ class Item {
   final String name;
   final String description;
   final num price;
-  final String color;
+  // final String color;
   final String image;
 
   Item({
@@ -38,7 +38,7 @@ class Item {
     required this.name,
     required this.description,
     required this.price,
-    required this.color,
+    // required this.color,
     required this.image,
   });
 
@@ -48,7 +48,7 @@ class Item {
       name: map["name"],
       description: map["description"],
       price: map["price"],
-      color: map["color"],
+      // color: map["color"],
       image: map["image"],
     );
   }
@@ -58,7 +58,7 @@ class Item {
         "name": name,
         "description": description,
         "price": price,
-        "color": color,
+        // "color": color,
         "image": image,
       };
 }
